@@ -9,8 +9,9 @@ Online Sticky Notes application using modern JavaScript frameworks.
 - **React-Quill Toolbar**: Seamless and rich text editing experience.
 - **AI Text Generation**: Generate text suggestions and content using AI-powered tools.
 - **Dark Mode**: User-friendly interface with dark mode for comfortable usage in low-light environments.
+- 
+![Screenshot 2025-01-02 171010](https://github.com/user-attachments/assets/2cf9f5d4-3fd9-4e83-b128-50e0633c2cec)
 
-![Screenshot (29)](https://github.com/user-attachments/assets/987f7a91-f978-4fbb-bf84-d6d4cf38921b)
 
 ## Contributing
 
