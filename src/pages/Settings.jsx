@@ -3,14 +3,19 @@ import { useNavigate } from "react-router-dom";
 
 function Settings() {
     const [username, setUsername] = useState("");
+    const [apiKey, setApiKey] = useState("");
     const navigate = useNavigate();
 
     const saveUsername = () => {
         localStorage.setItem("username", username);
-        console.log(`Username saved: ${username}`);
         navigate("/");
         setUsername("");
     };
+    const saveApiKey = () => {
+        localStorage.setItem('apiKey',apiKey);
+        navigate("/");
+        setApiKey("");
+    }
 
     const handleKeyPress = (e) => {
         if (e.key === "Enter") {
@@ -47,6 +52,26 @@ function Settings() {
                             className="px-4 py-2 bg-black text-white rounded-md hover:bg-gray-700"
                         >
                             Change
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div className="w-1/3 flex flex-col items-center gap-4 cursor-pointer">
+                <ul className="w-full list-none px-5 py-4">
+                    <li className="flex flex-col gap-4">
+                        <p className="text-lg font-semibold dark:text-stone-200">Gemini Api Key</p>
+                        <input
+                            type="text"
+                            value={apiKey}
+                            onChange={(e) => setApiKey(e.target.value)}
+                            placeholder="Your API Key"
+                            className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                        <button
+                            onClick={saveApiKey}
+                            className="px-4 py-2 bg-black text-white rounded-md hover:bg-gray-700"
+                        >
+                            Save
                         </button>
                     </li>
                 </ul>

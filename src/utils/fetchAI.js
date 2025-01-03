@@ -1,20 +1,26 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
-const geminiModel = process.env.REACT_APP_GEMINI_MODEL;
+const geminiModel = "gemini-1.5-pro";
 
 async function fetchAI(prompt) {
-    if (!prompt) {
-        throw new Error("Prompt cannot be empty");
+    const apiKey = localStorage.getItem('apiKey');
+    if (!apiKey) {
+        return "API key is missing. Please save the API key in the settings";
     }
+    if (!prompt || typeof prompt !== "string") {
+        return "Invalid prompt.";
+    }
+
     try {
-        const genAI = new GoogleGenerativeAI(apiKey);
-        const model = genAI.getGenerativeModel({ model: geminiModel });
-        const result = await model.generateContent(prompt);
+        const genAI = new GoogleGenerativeAI({ apiKey });
+
+        const model =  genAI.getGenerativeModel({ model: geminiModel });
+
+        const result = await model.generateContent({ prompt });
+
         return result.response.text();
     } catch (error) {
-        console.error("Error fetching AI response:", error);
-        throw new Error("Error Fetching AI response")
+        return "An unexpected error occurred while fetching the AI response.";
     }
 }
 

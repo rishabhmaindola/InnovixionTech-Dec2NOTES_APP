@@ -85,7 +85,7 @@ function Sidebar(props) {
         {isDarkMode ? <MdDarkMode /> : <MdLightMode />}
       </motion.p>
       <motion.p
-        className="w-10 pt-2 xs:text-2xl text-2xl sm:text-2xl lg:text-3xl xl:text-3xl flex items-center justify-center cursor-pointer text-black dark:text-stone-100"
+        className="w-10 pt-2 xs:text-2xl text-2xl sm:text-2xl lg:text-3xl xl:text-3xl flex items-center justify-center cursor-pointer text-zinc-800 dark:text-stone-100"
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.2 }}
         whileTap={{ scale: 0.9 }}
@@ -97,7 +97,7 @@ function Sidebar(props) {
         whileTap={{ scale: 0.9, }}
         transition={{ duration: 0.2 }}
         href="/settings"
-        className="w-10 pt-2 xs:text-2xl text-2xl sm:text-2xl lg:text-3xl xl:text-3xl flex items-center justify-center text-black dark:text-stone-100"
+        className="w-10 pt-2 xs:text-2xl text-2xl sm:text-2xl lg:text-3xl xl:text-3xl flex items-center justify-center text-zinc-800 dark:text-stone-100"
       >
         <IoSettings />
       </motion.a>

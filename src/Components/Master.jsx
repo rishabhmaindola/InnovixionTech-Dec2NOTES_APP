@@ -18,9 +18,9 @@ function Master() {
     return (
         <div className="w-full p-2 flex items-center justify-between xs:text-2xl sm:text-2xl text-2xl lg:text-3xl xl:text-3xl font-bold">
             {username === null ? (
-                <h2 className='text-black dark:text-stone-200' >Notepad</h2>
+                <h2 className='text-zinc-800 dark:text-stone-200' >Notepad</h2>
             ) : (
-                <h2 className='text-black dark:text-stone-200'>{username}'s Notepad</h2>
+                <h2 className='text-zinc-800 dark:text-stone-200'>{username}'s Notepad</h2>
             )}
         </div>
     );
