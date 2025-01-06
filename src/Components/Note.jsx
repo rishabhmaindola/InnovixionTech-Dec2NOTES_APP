@@ -216,8 +216,8 @@ function Note(props) {
         className={`absolute bottom-20 right-5 m-5 bg-stone-800 dark:bg-conic-gradient dark:drop-shadow-xl  rounded-lg shadow-lg ${aiResponse ? "p-[3px]" : "p-0"
           }`}
       >
-        <div className="relative w-full h-full ">
-          <span className="block bg-slate-700 text-stone-200 font-roboto font-semibold text-pretty h-full overflow-y-scroll scrollbar-hide cursor-pointer p-4 rounded-lg text-left">
+        <div className="relative w-full h-full cursor-pointer ">
+          <span className="flex bg-slate-700 text-stone-200 font-roboto font-semibold text-pretty h-full max-h-[400px] overflow-y-scroll cursor-pointer p-4 rounded-lg text-left">
             {aiResponse}
           </span>
           <motion.ul
@@ -230,7 +230,7 @@ function Note(props) {
               duration: 0.1,
               ease: "easeInOut",
             }}
-            className="absolute -top-7 right-0 flex items-center justify-center space-x-3 z-10"
+            className="absolute -top-7 right-0 flex items-center justify-center cursor-pointer space-x-3 z-10"
           >
             <motion.li
               whileHover={{ y: -3, scale: 1.1 }}
