@@ -304,7 +304,7 @@ function Note(props) {
           <MdDelete />
         </motion.button>
       </span>
-      <div className="w-full h-full flex flex-col items-center gap-2">
+      <div className="w-full max-h-[550px] flex flex-col items-center gap-2">
         <ReactQuill
           theme="bubble"
           value={value}

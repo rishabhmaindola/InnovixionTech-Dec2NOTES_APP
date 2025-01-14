@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import NoteContainer from "../Components/NoteContainer";
 import Sidebar from "../Components/Sidebar";
 
-
 function Home() {
     const [notes, setNotes] = useState(
         JSON.parse(localStorage.getItem("notes-app")) || []

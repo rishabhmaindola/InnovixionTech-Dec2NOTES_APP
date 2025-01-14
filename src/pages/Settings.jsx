@@ -49,7 +49,7 @@ function Settings() {
 
     return (
         <div className="flex flex-col items-center justify-around w-full min-h-screen bg-white dark:bg-linear-225 dark:from-zinc-500 dark:via-stone-600 dark:to-zinc-800">
-            <div className="w-1/3 flex flex-col items-center gap-4 cursor-pointer">
+            <div className="w-4/5 md:w-1/2 lg:w-1/3 xl:w-1/3 flex flex-col items-center gap-4 cursor-pointer">
                 <ul className="w-full list-none px-5 py-4">
                     <li className="flex flex-col gap-4">
                         <p className="text-lg font-semibold dark:text-stone-200">Username</p>
@@ -70,7 +70,7 @@ function Settings() {
                     </li>
                 </ul>
             </div>
-            <div className="w-1/3 flex flex-col items-center gap-4 cursor-pointer">
+            <div className="w-4/5 md:w-1/2 lg:w-1/3 xl:w-1/3  flex flex-col items-center gap-4 cursor-pointer">
                 <ul className="w-full list-none px-5 py-4">
                     <li className="flex flex-col gap-4">
                         <p className="text-lg font-semibold dark:text-stone-200">Gemini API Key</p>

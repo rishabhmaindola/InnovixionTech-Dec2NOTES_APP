@@ -29,7 +29,9 @@ function NoteContainer(props) {
             />
           ))
         ) : (
-          <h3 className="text-black dark:text-stone-200">No Notes present</h3>
+          <div className="flex flex-col w-full text-black dark:text-stone-200">
+            <p className="text-nowrap">No Notes present</p>
+          </div>
         )}
       </div>
     </div>
