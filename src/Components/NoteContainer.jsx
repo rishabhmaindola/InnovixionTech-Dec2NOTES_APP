@@ -18,7 +18,7 @@ function NoteContainer(props) {
   return (
     <div className="w-full h-full flex flex-col">
       <Master />
-      <div className="flex-1 px-2 flex flex-wrap gap-5 overflow-y-scroll scrollbar-hide">
+      <div className="flex px-2 w-full  flex-wrap gap-5 overflow-y-scroll scrollbar-hide">
         {notes?.length > 0 ? (
           notes.map((item) => (
             <Note

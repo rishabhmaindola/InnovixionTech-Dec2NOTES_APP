@@ -176,7 +176,7 @@ function Note(props) {
   }, [transcript, error]);
 
   useKey("Enter", () => {
-    if (inputText.trim() !== "" && isOpen) {
+    if (isOpen && inputText.trim() !== "") {
       handleAIResponse();
     } else {
       setAIError("Empty Prompt!");
@@ -199,7 +199,7 @@ function Note(props) {
 
   return (
     <div
-      className="p-5 my-5 h-[680px] w-full flex flex-col justify-between rounded-[30px] relative"
+      className="p-5 my-5 h-[680px] w-full lg:w-[950px] xl:w-[1320px]  flex flex-col justify-between rounded-[30px] relative "
       style={{ backgroundColor: props.note.color }}
     >
       <motion.div
@@ -304,13 +304,14 @@ function Note(props) {
           <MdDelete />
         </motion.button>
       </span>
-      <div className="w-full max-h-[550px] flex flex-col items-center gap-2">
+      <div className="w-full min-h-[550px]  flex flex-col items-center gap-2">
         <ReactQuill
           theme="bubble"
           value={value}
           onChange={handleTextChange}
           modules={modules}
-          className="w-full h-full text-lg custom-scroll"
+          placeholder="Start typing here..."
+          className="w-full h-full text-lg custom-scroll text-wrap break-words"
         />
       </div>
       <div className="flex justify-between items-center py-2">
